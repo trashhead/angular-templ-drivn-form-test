@@ -16,4 +16,8 @@ export class AppComponent {
       value:""
     }
   }
+
+  click(){
+    this.myobject.value = "ABC";
+  }
 }

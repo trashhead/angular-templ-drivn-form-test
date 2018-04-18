@@ -9,12 +9,11 @@
   Is form valid: {{form.valid}}<br/>
   <mat-form-field fxFill>
     <mat-select placeholder='My dropdown' [(ngModel)]='myobject.value' name='mydropdown' required>
-      <mat-option value='ABC'>
-        ABC
-      </mat-option>
-      <mat-option value='DEF'>
-        DEF
-      </mat-option>
+        <mat-option *ngFor='let typ of ["ABC", "DEF"]' [value]='typ'>
+            {{ typ }}
+          </mat-option>
     </mat-select>
   </mat-form-field>
+
+  <button (click)="click()">Click to set value ABC</button>
 </form>
